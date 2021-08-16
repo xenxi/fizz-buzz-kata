@@ -3,7 +3,9 @@ function fizzBuzzer(number) {
   if (isFizz(number)) return "Fizz";
   if (isBuzz(number)) return "Buzz";
 
-  return `${number}`;
+  const defaultRule = new DefaultRule(null);
+
+  return defaultRule.apply(number);
 }
 
 function isBuzz(number) {
@@ -16,6 +18,24 @@ function isFizz(number) {
 
 function isFizzBuzz(number) {
   return number % 3 == 0 && number % 5 == 0;
+}
+
+class Rule {
+  constructor(nextRule) {
+    this.nextRule = nextRule;
+  }
+  apply(number) {
+    throw new Error("Abstract method!");
+  }
+}
+
+class DefaultRule extends Rule {
+  constructor(nextRule) {
+    super(nextRule);
+  }
+  apply(number) {
+    return `${number}`;
+  }
 }
 
 module.exports = fizzBuzzer;
