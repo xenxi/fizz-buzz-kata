@@ -1,0 +1,22 @@
+{
+  "name": "fizz-buzz-js",
+  "version": "1.0.0",
+  "description": "Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xenxi/FizzBuzz.git"
+  },
+  "author": "amdiaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xenxi/FizzBuzz/issues"
+  },
+  "homepage": "https://github.com/xenxi/FizzBuzz#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
