@@ -24,4 +24,8 @@ describe("FizzBuzzer should", () => {
       expect(fizzBuzzer(number)).toBe("Fizz");
     });
   });
+
+  test("return Buzz if divisible by 5", () => {
+      expect(fizzBuzzer(5).toBe("buzz"));
+  });
 });
