@@ -34,5 +34,6 @@ describe("FizzBuzzer should", () => {
 
   test("return FizzBuzz if divisible by 3 and 5", () => {
       expect(fizzBuzzer(15)).toBe("FizzBuzz");
+      expect(fizzBuzzer(30)).toBe("FizzBuzz");
   });
 });
