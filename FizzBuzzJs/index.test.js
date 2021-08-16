@@ -1,13 +1,18 @@
-const fizzBuzzer = require('./index');
+const fizzBuzzer = require("./index");
 
-describe('FizzBuzzer should', () => {
-    test('return 1', () => {
-        expect(fizzBuzzer(1)).toBe('1');
-    });    
-});
-
-describe('FizzBuzzer should', () => {
-    test('return 2', () => {
-        expect(fizzBuzzer(2)).toBe('2');
-    });    
+describe("FizzBuzzer should", () => {
+  [
+    {
+      number: 1,
+      expect: "1",
+    },
+    {
+      number: 2,
+      expect: "2",
+    },
+  ].forEach((testData) => {
+    it(`return ${testData.expect}`, () => {
+      expect(fizzBuzzer(testData.number)).toBe(testData.expect);
+    });
+  });
 });
