@@ -1,11 +1,11 @@
 function fizzBuzzer(number) {
   if (isFizzBuzz(number)) return "FizzBuzz";
-  if (isFizz(number)) return "Fizz";
   if (isBuzz(number)) return "Buzz";
 
   const defaultRule = new DefaultRule(null);
+  const fizzRule = new FizzRule(defaultRule);
 
-  return defaultRule.apply(number);
+  return fizzRule.apply(number);
 }
 
 function isBuzz(number) {
@@ -35,6 +35,16 @@ class DefaultRule extends Rule {
   }
   apply(number) {
     return `${number}`;
+  }
+}
+class FizzRule extends Rule {
+  constructor(nextRule) {
+    super(nextRule);
+  }
+  apply(number) {
+    if (number % 3 === 0) return "Fizz";
+
+    return this.nextRule.apply(number);
   }
 }
 
