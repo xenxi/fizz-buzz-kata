@@ -1,7 +1,8 @@
 const fizzBuzzer = require("./index");
 
 describe("FizzBuzzer should", () => {
-  [
+  const numbersDivisibleBy3 = [3, 6];
+  const defaultNumbers = [
     {
       number: 1,
       expect: "1",
@@ -10,15 +11,17 @@ describe("FizzBuzzer should", () => {
       number: 2,
       expect: "2",
     },
-  ].forEach((testData) => {
+  ];
+
+  defaultNumbers.forEach((testData) => {
     it(`return ${testData.expect}`, () => {
       expect(fizzBuzzer(testData.number)).toBe(testData.expect);
     });
   });
 
   test("return Fizz if divisible by 3", () => {
-      expect(fizzBuzzer(3)).toBe('Fizz');
-      expect(fizzBuzzer(6)).toBe('Fizz');
+    numbersDivisibleBy3.forEach((number) => {
+      expect(fizzBuzzer(number)).toBe("Fizz");
+    });
   });
-  
 });
