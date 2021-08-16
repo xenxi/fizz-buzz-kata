@@ -1,24 +1,10 @@
 function fizzBuzzer(number) {
-  if (isFizzBuzz(number)) return "FizzBuzz";
-
   const defaultRule = new DefaultRule(null);
   const fizzRule = new FizzRule(defaultRule);
   const buzzRule = new BuzzRule(fizzRule);
   const fizzBuzzRule = new FizzBuzzRule(buzzRule);
 
   return fizzBuzzRule.apply(number);
-}
-
-function isBuzz(number) {
-  return number % 5 === 0;
-}
-
-function isFizz(number) {
-  return number % 3 === 0;
-}
-
-function isFizzBuzz(number) {
-  return number % 3 == 0 && number % 5 == 0;
 }
 
 class Rule {
