@@ -15,4 +15,8 @@ describe("FizzBuzzer should", () => {
       expect(fizzBuzzer(testData.number)).toBe(testData.expect);
     });
   });
+
+  testData("return Fizz if divisible by 3", () => {
+      expect(fizzBuzzer(3).toBe('Fizz'));
+  });
 });
