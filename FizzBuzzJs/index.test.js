@@ -2,6 +2,7 @@ const fizzBuzzer = require("./index");
 
 describe("FizzBuzzer should", () => {
   const numbersDivisibleBy3 = [3, 6];
+  const numbersDivisibleBy5 = [5, 10];
   const defaultNumbers = [
     {
       number: 1,
@@ -26,7 +27,13 @@ describe("FizzBuzzer should", () => {
   });
 
   test("return Buzz if divisible by 5", () => {
-      expect(fizzBuzzer(5)).toBe("Buzz");
-      expect(fizzBuzzer(10)).toBe("Buzz");
+    expect(fizzBuzzer(5)).toBe("Buzz");
+    expect(fizzBuzzer(10)).toBe("Buzz");
+  });
+
+  test("return Buzz if divisible by 5", () => {
+    numbersDivisibleBy5.forEach((number) => {
+      expect(fizzBuzzer(number)).toBe("Buzz");
+    });
   });
 });
