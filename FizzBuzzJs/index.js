@@ -1,5 +1,5 @@
 function fizzBuzzer(number) {
-    return '1';
+    return `${number}`;
 }
 
 module.exports = fizzBuzzer;
