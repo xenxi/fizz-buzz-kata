@@ -3,3 +3,8 @@
 ################################################################################
 
 /FizzBuzzDotNet/.vs/FizzBuzz
+/FizzBuzzDotNet/FizzBuzz/bin/Debug/netcoreapp3.1
+/FizzBuzzDotNet/FizzBuzz/obj
+/FizzBuzzDotNet/FizzBuzz.Test/obj
+/FizzBuzzDotNet/FizzBuzz.Test/bin/Debug/netcoreapp3.1
+/FizzBuzzDotNet/FizzBuzz.sln.DotSettings.user
