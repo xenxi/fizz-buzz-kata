@@ -11,4 +11,13 @@ describe("FizzBuzzGenerator should", () => {
 
     expect(elements.length).toBe(100);
   });
+
+  test("convert numbers from 1 to 100", () => {
+    const elements = FizzBuzzGenerator.generate();
+
+    expect(elements[0]).toBe("1");
+    expect(elements[2]).toBe("Fizz");
+    expect(elements[14]).toBe("FizzBuzz");
+    expect(elements[99]).toBe("Buzz");
+  });
 });
