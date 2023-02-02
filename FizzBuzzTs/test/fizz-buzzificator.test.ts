@@ -16,4 +16,12 @@ describe("FizzBuzzificator should", () => {
       expect(result).toBe("Buzz");
     });
   });
+
+  test("return FizzBuzz if divisible by 3 and 5", () => {
+    [15, 30].forEach((numberDivisibleBy3And5) => {
+      const result = FizzBuzzificator.convert(numberDivisibleBy3And5);
+
+      expect(result).toBe("FizzBuzz");
+    });
+  });
 });
