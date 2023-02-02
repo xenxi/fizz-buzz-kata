@@ -24,4 +24,12 @@ describe("FizzBuzzificator should", () => {
       expect(result).toBe("FizzBuzz");
     });
   });
+
+  test("return the same number as text if it is not divisible by 3 or 5", () => {
+    [1, 2, 4].forEach((numberNotDivisibleBy3And5) => {
+      const result = FizzBuzzificator.convert(numberNotDivisibleBy3And5);
+
+      expect(result).toBe(numberNotDivisibleBy3And5.toString());
+    });
+  });
 });
